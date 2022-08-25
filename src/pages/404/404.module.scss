@@ -1,0 +1,57 @@
+@mixin base($t, $fs) {
+  top: $t;
+  font-size: $fs;
+}
+
+.page_404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 5;
+  h1,
+  h2,
+  h3,
+  .link {
+    position: absolute;
+    color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  h1 {
+    @include base(6.5%, 110px);
+  }
+  h2 {
+    @include base(70%, 75px);
+  }
+  h3 {
+    @include base(82%, 25px);
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    top: 89%;
+    justify-content: center;
+    height: 70px;
+    width: 150px;
+    color: black;
+    background-color: #65b515;
+    border-radius: 20px;
+    text-decoration: none;
+    &:hover {
+      transform: translate(-50%, -4%);
+      box-shadow: 0 2px 4px 2px rgba(0, 0, 255, 0.2);
+    }
+  }
+}

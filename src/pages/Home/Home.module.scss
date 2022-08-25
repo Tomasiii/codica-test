@@ -1,0 +1,13 @@
+.cities {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  height: 100%;
+}
+
+.city {
+  height: 100%;
+}

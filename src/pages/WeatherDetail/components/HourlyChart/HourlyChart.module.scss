@@ -1,0 +1,45 @@
+@import "@/styles/variables.scss";
+
+.chart {
+  &__wrapper {
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+
+  &__item {
+    position: relative;
+    color: black;
+  }
+  &__temp {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+      transform: translateY(-60%);
+    }
+  }
+
+  &__time {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom: 50px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    color: $base-color;
+  }
+  &__hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
