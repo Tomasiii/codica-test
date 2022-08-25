@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import futureWeather from "@/api/futureWeather";
+import { IIcon } from "@/assets/SunImg/SunImg";
 import { useAppSelector } from "@/hooks/hooksHelpers";
 import { selectCurrentCityCoord } from "@/store/selectors/currentCity.selector";
 
@@ -13,7 +14,7 @@ export interface Day {
   max_temp: number;
   min_temp: number;
   weather: {
-    icon: string;
+    icon: IIcon[keyof IIcon];
     description: string;
   };
 }

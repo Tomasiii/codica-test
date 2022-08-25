@@ -21,8 +21,10 @@ const HourlyChart = ({ coord }: IProps) => {
     const fetchData = async () => {
       const res = await forecast.get("", { params: { q: `${lat},${lon}` } });
       const allHoursForecast = res.data.forecast.forecastday[0].hour;
-      const hoursForecast = allHoursForecast.filter((_, i) => i % 3 === 0);
-      const hoursForecastTemp = hoursForecast.map(item => item.temp_c);
+      const hoursForecast = allHoursForecast.filter(
+        (_: any, i: any) => i % 3 === 0
+      );
+      const hoursForecastTemp = hoursForecast.map((item: any) => item.temp_c);
       setHourlyData(hoursForecastTemp);
     };
     fetchData();
