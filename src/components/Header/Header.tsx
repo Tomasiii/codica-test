@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 
 import { GlobalSvgSelector } from "@/assets/icons/global/GlobalSvgSelector";
+import Search from "@/components/Header/components/Search/Search";
 import { Theme } from "@/context/ThemeContext";
 import useActions from "@/hooks/useActions";
 import { useTheme } from "@/hooks/useTheme";
@@ -49,7 +50,7 @@ const Header = () => {
         </div>
         <div className={s.title}>React weather</div>
       </Link>
-      {/*<Search />*/}
+      <Search />
       <div className={s.wrapper}>
         <div className={s.change_theme} onClick={changeTheme}>
           <GlobalSvgSelector id="change-theme" />
