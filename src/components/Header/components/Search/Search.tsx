@@ -30,7 +30,6 @@ const Search = () => {
         };
       });
   };
-
   const handleOnChange = (searchData: ICountryData) => {
     setSearch(searchData);
     getCurrentWeather(searchData);
